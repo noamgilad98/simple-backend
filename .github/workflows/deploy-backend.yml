@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Runs on push to the main branch
 
+permissions:
+  id-token: write  # Required for Azure OIDC authentication
+  contents: read   # Needed to access repo content
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
